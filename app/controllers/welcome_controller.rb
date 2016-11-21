@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
-  end
+	def home 
+		@variable = "4"
+	end 
 end
