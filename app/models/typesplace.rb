@@ -1,4 +1,5 @@
 class Typesplace < ApplicationRecord
+	
 	has_many :places
 	
 	def initialize(attributes = {})

@@ -1,4 +1,5 @@
 class Place < ActiveRecord::Base
+
 	belongs_to :typesplace
 	belongs_to :concert
 	has_many :reservations
@@ -9,8 +10,8 @@ class Place < ActiveRecord::Base
 		self[:prix] = attributes[:prix]
 	end
 	
-	def ajout_place(nombre)
-		self[:places] += nombre
+	def modifier_prix(prix)
+		self[:prix] = prix
 	end
 	
 	def reservation_place(nombre)
@@ -19,8 +20,7 @@ class Place < ActiveRecord::Base
 		end
 	end
 	
-	def modifier_prix(prix)
-		self[:prix] = prix
+	def ajout_place(nombre)
+		self[:places] += nombre
 	end
-	
 end
