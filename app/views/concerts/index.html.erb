@@ -1,8 +1,24 @@
+
+<div align='right'>
+	<div id="searchbar">
+		<h5>Barre de recherche</h5>
+                <form action="" class="formulaire">
+			<FORM method=GET action=http://www.google.com/custom>
+			<INPUT TYPE=text name=q size=15 maxlength=255 value=""><br><br>
+			<INPUT type=submit name=sa VALUE="OK">
+			<input type=hidden name=domains value="localhost:3000/concerts"><br><br>
+		</FORM>
+               
+                     
+                </form>
+         </div>
+</div>
+
 <br><a href="http://localhost:3000/new"> 
 	Creer un Concert
 </a> 
 
-<h1> Concerts </h1>
+<h3> Concerts </h3>
 <ul>
   <% @concerts.each do |concert| %>
     <li>
@@ -23,7 +39,7 @@
 	Creer un Genre
 </a>
 
-<h1> Genres </h1>
+<h3> Genres </h3>
 <ul>
   <% @genres.each do |genre| %>
     <li>
@@ -43,7 +59,7 @@
 	Creer un Artiste
 </a>
 
-<h1> Artistes </h1>
+<h3> Artistes </h3>
 <ul>
   <% @artistes.each do |artiste| %>
     <li>
@@ -63,7 +79,7 @@
 	Creer un Type de places
 </a>
 
-<h1> Typesplaces </h1>
+<h3> Typesplaces </h3>
 <ul>
   <% @typesplaces.each do |typesplace| %>
     <li>
@@ -83,7 +99,7 @@
 	Creer des places
 </a>
 
-<h1> Places </h1>
+<h3> Places </h3>
 <ul>
   <% @places.each do |place| %>
     <li>
@@ -103,7 +119,7 @@
 	Creer une séance
 </a>
 
-<h1> Seances </h1>
+<h3> Seances </h3>
 <ul>
   <% @seances.each do |seance| %>
     <li>
