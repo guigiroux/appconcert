@@ -6,4 +6,9 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get details" do
+    get pages_details_url
+    assert_response :success
+  end
+
 end
