@@ -1,4 +1,6 @@
 class ArtistesController < ApplicationController
+
+	
   def index
 	@artistes = Artiste.all
   end
@@ -19,11 +21,7 @@ class ArtistesController < ApplicationController
 		redirect_to :back
 	end
   end
-  
-  def edit
-	@artiste = Artiste.find(params[:id])
-  end
-  
+
 	def update
 		@artiste = Artiste.find(params[:id])
 		
@@ -36,6 +34,10 @@ class ArtistesController < ApplicationController
   
 
   def show
+	@artiste = Artiste.find(params[:id])
+  end
+
+  def edit
 	@artiste = Artiste.find(params[:id])
   end
   

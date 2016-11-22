@@ -27,7 +27,15 @@ class SeancesController < ApplicationController
 	@seance = Seance.find(params[:id])
   end
   
-	def update
+	
+  def show
+	@seance = Seance.find(params[:id])
+	@seances = Seance.all
+	@concerts = Concert.all
+	@artistes = Artiste.all
+  end
+
+  def update
 		@seance = Seance.find(params[:id])
 		
 		if @seance.update(place_params)
@@ -37,12 +45,6 @@ class SeancesController < ApplicationController
 		end
 	end
 
-  def show
-	@seance = Seance.find(params[:id])
-	@seances = Seance.all
-	@concerts = Concert.all
-	@artistes = Artiste.all
-  end
   
 	def destroy
 		@seance = Seance.find(params[:id])

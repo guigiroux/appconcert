@@ -1,4 +1,5 @@
 class TypesplacesController < ApplicationController
+
   def index
 	@typesplaces = Typesplace.all
   end
@@ -24,7 +25,12 @@ class TypesplacesController < ApplicationController
 	@typesplace = Typesplace.find(params[:id])
   end
   
-	def update
+
+  def show
+	@typesplace = Typesplace.find(params[:id])
+  end
+
+  def update
 		@typesplace = Typesplace.find(params[:id])
 		
 		if @typesplace.update(typesplace_params)
@@ -33,11 +39,6 @@ class TypesplacesController < ApplicationController
 			render 'edit'
 		end
 	end
-  
-
-  def show
-	@typesplace = Typesplace.find(params[:id])
-  end
   
 	def destroy
 		@typesplace = Typesplace.find(params[:id])

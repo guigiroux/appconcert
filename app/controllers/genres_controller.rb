@@ -13,7 +13,6 @@ class GenresController < ApplicationController
 	@genres = Genre.all
 	@genre = Genre.new(genre_params)
 	@genre.save
-#	@genre.update(:concert_attributes => {:nom => "testValue"})
 	if @genre.save
 		redirect_to "http://localhost:3000/new"
 	else
@@ -24,8 +23,12 @@ class GenresController < ApplicationController
   def edit
 	@genre = Genre.find(params[:id])
   end
+
+  def show
+	@genre = Genre.find(params[:id])
+  end
   
-	def update
+  	def update
 		@genre = Genre.find(params[:id])
 		
 		if @genre.update(genre_params)
@@ -34,11 +37,6 @@ class GenresController < ApplicationController
 			render 'edit'
 		end
 	end
-  
-
-  def show
-	@genre = Genre.find(params[:id])
-  end
   
 	def destroy
 		@genre = Genre.find(params[:id])

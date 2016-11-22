@@ -25,9 +25,13 @@ class PlacesController < ApplicationController
   
   def edit
 	@place = Place.find(params[:id])
+  end  
+
+  def show
+	@place = Place.find(params[:id])
   end
   
-	def update
+  def update
 		@place = Place.find(params[:id])
 		
 		if @place.update(place_params)
@@ -36,11 +40,6 @@ class PlacesController < ApplicationController
 			render 'edit'
 		end
 	end
-  
-
-  def show
-	@place = Place.find(params[:id])
-  end
   
 	def destroy
 		@place = Place.find(params[:id])
